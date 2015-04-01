@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+
+<hr size="4" noshade color="Grey" width="300" align="left">
+    <%= link_to 'Edit', edit_leader_path(@leader) %> |
+    <%= link_to 'Back', leaders_path %>
+<hr size="3" noshade color="Grey" width="300" align="left">
+
+
+<table id="table_show_leaders" class="display" cellpadding="5" border="1" cellspacing="0" bgcolor="#9370db" frame="box"  width="300">
+  <thead>
+  <tr>
+    <th>Data Collection Element</th>
+    <th>Answer</th>
+  </tr>
+  <tbody>
+
+  <tr bgcolor='cccccc'><td><b>ID</b></td>	<td>   <b><%=@leader.id    %></b></td></tr>
+
+
+  <tr bgcolor='cccccc'><td><b>First Name</b></td>		<td>   <b><b><b><%=@leader.first_name %></td><tr>
+      <tr bgcolor="ffffff"><td><b>Middle Initial</b></td>   <td>   <b><b><b><%=@leader.middle_initial %></td><tr>
+      <tr bgcolor='cccccc'><td><b>Last Name</b></td>		<td>   <b><b><b><%=@leader.last_name %></td><tr>
+      <tr bgcolor="ffffff"><td><b>Given Leader ID</b></td>	<td>   <b><b><b><%=@leader.leader_gid %></td><tr>
+      <tr bgcolor='cccccc'><td><b>School ID</b></td>		<td>   <b><b><b><%=@leader.school_id %></td><tr>
+      <tr bgcolor="ffffff"><td><b>Comments</b></td>		    <td>   <b><b><b><%=@leader.comments %></td><tr>
+  </tbody>
+</table>
+
+
+<hr size="2" noshade color="Grey" width="300" align="left">
+<%= link_to 'Edit', edit_leader_path(@leader) %> |
+<%= link_to 'Back', leaders_path %>

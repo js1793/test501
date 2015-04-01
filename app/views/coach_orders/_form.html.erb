@@ -1,0 +1,21 @@
+<%= form_for(@coach_order) do |f| %>
+  <% if @coach_order.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@coach_order.errors.count, "error") %> prohibited this coach_order from being saved:</h2>
+
+      <ul>
+      <% @coach_order.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :.gitignorecoach_role %><br>
+    <%= f.text_field :.gitignorecoach_role %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

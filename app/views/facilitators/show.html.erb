@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>.gitignoregroup:</strong>
+  <%= @facilitator..gitignoregroup_id %>
+</p>
+
+<p>
+  <strong>Leader:</strong>
+  <%= @facilitator.leader_id %>
+</p>
+
+<p>
+  <strong>Role:</strong>
+  <%= @facilitator.role_id %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @facilitator.title_id %>
+</p>
+
+<%= link_to 'Edit', edit_facilitator_path(@facilitator) %> |
+<%= link_to 'Back', facilitators_path %>

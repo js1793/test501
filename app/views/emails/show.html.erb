@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Appleader:</strong>
+  <%= @email.appleader_id %>
+</p>
+
+<p>
+  <strong>Email account:</strong>
+  <%= @email.email_account %>
+</p>
+
+<p>
+  <strong>Which phone:</strong>
+  <%= @email.which_phone %>
+</p>
+
+<p>
+  <strong>Comments:</strong>
+  <%= @email.comments %>
+</p>
+
+<%= link_to 'Edit', edit_email_path(@email) %> |
+<%= link_to 'Back', emails_path %>

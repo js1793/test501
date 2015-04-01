@@ -1,0 +1,26 @@
+<p id="notice"><%= notice %></p>
+
+<hr size="4" noshade color="Grey" width="300" align="left">
+<%= link_to 'Edit', edit_group_path(@group) %> |
+<%= link_to 'Back', groups_path %>
+<hr size="3" noshade color="Grey" width="300" align="left">
+<table id="table_show_leaders" class="display" cellpadding="5" border="1" cellspacing="0" bgcolor="#9370db" frame="box"  width="300">
+  <tr>
+    <th>Data Collection Element</th>
+    <th>Answer</th>
+  </tr>
+
+  <tr bgcolor='cccccc'><td><b>ID</b></td>	            <td>   <b><%=@group.id    %></b></td></tr>
+
+
+  <tr bgcolor='cccccc'><td><b>Group ID Given</b></td>	<td>   <b><%=@group.group_gid    %></b></td></tr>
+  <tr bgcolor="ffffff"><td><b>Cycle ID:     </b></td>   <td>   <b><%=@group.cycle_id     %></b></td></tr>
+  <tr bgcolor='cccccc'><td><b>Last Name</b></td>		<td>   <b><%=@group.school_id    %></b></td></tr>
+  <tr bgcolor="ffffff"><td><b>Given Leader ID</b></td>	<td>   <b><%=@group.meridian_id  %></b></td></tr>
+  <tr bgcolor='cccccc'><td><b>School ID</b></td>		<td>   <b><%=@group.type_id      %></b></td></tr>
+  <tr bgcolor="ffffff"><td><b>Comments</b></td>         <td>   <b><%=@group.comments     %></b></td></tr>
+</table>
+<hr size="2" noshade color="Grey" width="300" align="left">
+<%= link_to 'Edit', edit_group_path(@group) %> |
+<%= link_to 'Back', groups_path %>
+

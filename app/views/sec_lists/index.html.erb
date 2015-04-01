@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Sec Lists</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>.ideanumber</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @sec_lists.each do |sec_list| %>
+      <tr>
+        <td><%= sec_list..ideanumber %></td>
+        <td><%= link_to 'Show', sec_list %></td>
+        <td><%= link_to 'Edit', edit_sec_list_path(sec_list) %></td>
+        <td><%= link_to 'Destroy', sec_list, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Sec list', new_sec_list_path %>

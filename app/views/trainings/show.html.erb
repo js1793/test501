@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>.idealeader:</strong>
+  <%= @training..idealeader_id %>
+</p>
+
+<p>
+  <strong>Offering:</strong>
+  <%= @training.offering_id %>
+</p>
+
+<p>
+  <strong>Register:</strong>
+  <%= @training.register %>
+</p>
+
+<p>
+  <strong>Attended:</strong>
+  <%= @training.attended %>
+</p>
+
+<p>
+  <strong>Day:</strong>
+  <%= @training.day %>
+</p>
+
+<p>
+  <strong>Payment:</strong>
+  <%= @training.payment %>
+</p>
+
+<p>
+  <strong>Certificate:</strong>
+  <%= @training.certificate %>
+</p>
+
+<p>
+  <strong>Comments:</strong>
+  <%= @training.comments %>
+</p>
+
+<%= link_to 'Edit', edit_training_path(@training) %> |
+<%= link_to 'Back', trainings_path %>

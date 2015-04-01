@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Num session:</strong>
+  <%= @sec.num_session %>
+</p>
+
+<p>
+  <strong>Day session:</strong>
+  <%= @sec.day_session %>
+</p>
+
+<p>
+  <strong>T session:</strong>
+  <%= @sec.t_session %>
+</p>
+
+<p>
+  <strong>Comments:</strong>
+  <%= @sec.comments %>
+</p>
+
+<%= link_to 'Edit', edit_sec_path(@sec) %> |
+<%= link_to 'Back', secs_path %>

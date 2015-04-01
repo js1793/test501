@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Meridian name:</strong>
+  <%= @meridian.meridian_name %>
+</p>
+
+<p>
+  <strong>Comments:</strong>
+  <%= @meridian.comments %>
+</p>
+
+<%= link_to 'Edit', edit_meridian_path(@meridian) %> |
+<%= link_to 'Back', meridians_path %>

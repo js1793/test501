@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Groups</h1>
+
+<hr size="4" noshade color="Grey" width="300" align="left">
+
+<table id="table_show_groups" class="display" cellpadding="5" border="1" cellspacing="0" frame="box" width="300">
+  <thead>
+  <tr bgcolor="#d3d3d3">
+
+    <th>Given Group Id</th>
+      <th>Cycle</th>
+      <th>School</th>
+      <th>Meridian</th>
+  <th style="display:none;">Comments</th>
+  <th colspan="2"></th>
+  </tr>
+  </thead>
+
+  <tbody>
+    <% @groups.each do |group| %>
+      <tr>
+        <td><%= link_to group.group_gid, edit_group_path(group)  %></td>
+        <td><%= group.cycle_id %></td>
+        <td><%= group.school_id %></td>
+        <td><%= group.meridian_id %></td>
+        <td><%= group.comments %></td>
+        <td><%= link_to 'S', group %></td>
+        <td><%= link_to 'Destroy', group, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Group', new_group_path %>
+
+<hr size="4" noshade color="Grey" width="300" align="left">
+

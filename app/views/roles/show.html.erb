@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Appleader role:</strong>
+  <%= @role.appleader_role %>
+</p>
+
+<p>
+  <strong>Comments:</strong>
+  <%= @role.comments %>
+</p>
+
+<%= link_to 'Edit', edit_role_path(@role) %> |
+<%= link_to 'Back', roles_path %>

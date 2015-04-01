@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Coach Orders</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>.gitignorecoach role</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @coach_orders.each do |coach_order| %>
+      <tr>
+        <td><%= coach_order..gitignorecoach_role %></td>
+        <td><%= link_to 'Show', coach_order %></td>
+        <td><%= link_to 'Edit', edit_coach_order_path(coach_order) %></td>
+        <td><%= link_to 'Destroy', coach_order, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Coach order', new_coach_order_path %>

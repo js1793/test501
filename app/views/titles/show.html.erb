@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Appleader title:</strong>
+  <%= @title.appleader_title %>
+</p>
+
+<p>
+  <strong>Comments:</strong>
+  <%= @title.comments %>
+</p>
+
+<%= link_to 'Edit', edit_title_path(@title) %> |
+<%= link_to 'Back', titles_path %>

@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Secs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Num session</th>
+      <th>Day session</th>
+      <th>T session</th>
+      <th>Comments</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @secs.each do |sec| %>
+      <tr>
+        <td><%= sec.num_session %></td>
+        <td><%= sec.day_session %></td>
+        <td><%= sec.t_session %></td>
+        <td><%= sec.comments %></td>
+        <td><%= link_to 'Show', sec %></td>
+        <td><%= link_to 'Edit', edit_sec_path(sec) %></td>
+        <td><%= link_to 'Destroy', sec, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Sec', new_sec_path %>

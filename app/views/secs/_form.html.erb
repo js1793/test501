@@ -1,0 +1,33 @@
+<%= form_for(@sec) do |f| %>
+  <% if @sec.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@sec.errors.count, "error") %> prohibited this sec from being saved:</h2>
+
+      <ul>
+      <% @sec.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :num_session %><br>
+    <%= f.text_field :num_session %>
+  </div>
+  <div class="field">
+    <%= f.label :day_session %><br>
+    <%= f.text_field :day_session %>
+  </div>
+  <div class="field">
+    <%= f.label :t_session %><br>
+    <%= f.text_field :t_session %>
+  </div>
+  <div class="field">
+    <%= f.label :comments %><br>
+    <%= f.text_area :comments %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

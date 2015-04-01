@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Leaders</h1>
+
+<hr size="4" noshade color="Grey" width="300" align="left">
+
+ <table id="table_show_leaders" class="display" cellpadding="5" border="1" cellspacing="0" frame="box" width="300">
+  <thead>
+  <tr bgcolor="#d3d3d3">
+    <th>First name</th>
+    <th>Middle initial</th>
+    <th>Last name</th>
+    <th>Leader Project Given ID</th>
+    <th>School</th>
+    <th style="display:none;">Comments</th>
+    <th colspan="3"></th>
+  </tr>
+  </thead>
+  <tbody>
+  <% @leaders.each do |leader| %>
+
+      <tr>
+        <td><%= link_to leader.first_name[0], edit_leader_path(leader)   %></td><td style="display:none;"><%= leader.first_name %></td>
+        <td><%= leader.middle_initial %></td>
+        <td><%= leader.last_name[0]   %></td><td style="display:none;"><%= leader.last_name  %></td>
+        <td><%= link_to leader.leader_gid, edit_leader_path(leader)   %></td>
+        <td><%= leader.school_id %></td>
+        <td style="display:none;"><%= leader.comments %></td>
+        <td><%= link_to 'S', leader %></td>
+        <td style="display:none;"><%= link_to 'Destroy', leader, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Leader', new_leader_path %>
+

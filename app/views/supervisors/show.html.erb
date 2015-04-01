@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>.ideagroup:</strong>
+  <%= @supervisor..ideagroup_id %>
+</p>
+
+<p>
+  <strong>Coach:</strong>
+  <%= @supervisor.coach_id %>
+</p>
+
+<p>
+  <strong>Seniority:</strong>
+  <%= @supervisor.seniority %>
+</p>
+
+<%= link_to 'Edit', edit_supervisor_path(@supervisor) %> |
+<%= link_to 'Back', supervisors_path %>

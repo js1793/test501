@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Additional statements.battype name:</strong>
+  <%= @type.type_name %>
+</p>
+
+<p>
+  <strong>Comments:</strong>
+  <%= @type.comments %>
+</p>
+
+<%= link_to 'Edit', edit_type_path(@type) %> |
+<%= link_to 'Back', types_path %>

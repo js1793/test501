@@ -1,0 +1,48 @@
+<%= form_for(@leader) do |f| %>
+  <% if @leader.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@leader.errors.count, "error") %> prohibited this leader from being saved:</h2>
+
+      <ul>
+      <% @leader.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+<hr size="4" noshade color="Grey" width="300" align="left">
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+<hr size="3" noshade color="Grey" width="300" align="left">
+<table id="table_show_leaders" class="display" cellpadding="5" border="1" cellspacing="0" bgcolor="#9370db" frame="box" width="300">
+  <thead>
+  <tr>
+    <th>Data Collection Element</th>
+    <th>Answer</th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <tr bgcolor='cccccc'><td><b><%= f.label :id,  		        "DBID"            %></b></td><td>   <b><b><b><%=f.text_field :id                %></td><tr>
+  <tr bgcolor='cccccc'><td><b><%= f.label :first_name,  		"First Name"      %></b></td><td>   <b><b><b><%=f.text_field :first_name        %></td><tr>
+  <tr bgcolor="ffffff"><td><b><%= f.label :middle_initial,  	"Midddle Initial" %></b></td><td>   <b><b><b><%=f.text_field :middle_initial    %></td><tr>
+  <tr bgcolor='cccccc'><td><b><%= f.label :last_name,  		    "Last Name"       %></b></td><td>   <b><b><b><%=f.text_field :last_name         %></td><tr>
+  <tr bgcolor="ffffff"><td><b><%= f.label :leader_gid,  		"Given Leader ID" %></b></td><td>   <b><b><b><%=f.text_field :leader_gid        %></td><tr>
+  <tr bgcolor='cccccc'><td><b><%= f.label :school_id,  		    "School ID"       %></b></td><td>   <b><b><b><%=f.collection_select(:school_id,  School.all,  :id,  :name_with_id, :include_blank=>true) %></td><tr>
+  <tr bgcolor="ffffff"><td><b><%= f.label :comments,  		    "Comments"        %></b></td><td>   <b><b><b><%=f.text_field :comments          %></td><tr>
+  </tbody>
+</table>
+
+<hr size="2" noshade color="Grey" width="300" align="left">
+
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+
+
+
+<% end %>
+

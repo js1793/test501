@@ -1,0 +1,4 @@
+<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+#6 of applicatio.html.erb
+as per error
+

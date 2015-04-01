@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Meridians</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Meridian name</th>
+      <th>Comments</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @meridians.each do |meridian| %>
+      <tr>
+        <td><%= meridian.meridian_name %></td>
+        <td><%= meridian.comments %></td>
+        <td><%= link_to 'Show', meridian %></td>
+        <td><%= link_to 'Edit', edit_meridian_path(meridian) %></td>
+        <td><%= link_to 'Destroy', meridian, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Meridian', new_meridian_path %>

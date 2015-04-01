@@ -1,0 +1,33 @@
+<%= form_for(@facilitator) do |f| %>
+  <% if @facilitator.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@facilitator.errors.count, "error") %> prohibited this facilitator from being saved:</h2>
+
+      <ul>
+      <% @facilitator.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :.gitignoregroup_id %><br>
+    <%= f.number_field :.gitignoregroup_id %>
+  </div>
+  <div class="field">
+    <%= f.label :leader_id %><br>
+    <%= f.number_field :leader_id %>
+  </div>
+  <div class="field">
+    <%= f.label :role_id %><br>
+    <%= f.number_field :role_id %>
+  </div>
+  <div class="field">
+    <%= f.label :title_id %><br>
+    <%= f.number_field :title_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
